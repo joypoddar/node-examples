@@ -1,7 +1,15 @@
-var rect = {
-  perimeter: (x, y) => 2 * (x + y),
-  area: (x, y) => x * y,
+var rect = require("./rectangle");
+
+var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue",
 };
+
+console.log(rect);
+
+console.log(person.firstName);
 
 function solveRect(l, b) {
   console.log("Solving for rectangle with l = " + l + " and b = " + b);
@@ -14,8 +22,10 @@ function solveRect(l, b) {
         b
     );
   } else {
-    console.log("The area of the rectangle is " + rect.area(l, b));
-    console.log("The perimeter of the rectangle is " + rect.perimeter(l, b));
+    console.log("The area of the rectangle is " + rect.rect.area(l, b));
+    console.log(
+      "The perimeter of the rectangle is " + rect.rect.perimeter(l, b)
+    );
   }
 }
 
